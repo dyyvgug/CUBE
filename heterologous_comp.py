@@ -284,6 +284,6 @@ if __name__ == '__main__':
                 fi.write(opt)
             fi.close()
         else:
-            print('\tThe calculation of this species is not supported, and the species that supports calculation are mentioned in the \'sup_spe.txt\'.\n\tIf you have the genome and GFF annotation files of the species, you can use \'-gff\' and \'-genome\'.\n\t\'-gff\' and \'-genome\' are followed by the annotation file GFF format of the species and the fasta format file of the genome respectively.')
+            print('\tThe calculation of this species is not supported, and the species that supports calculation are mentioned in the \'supported_species.txt\'.\n\tIf you have the genome and GFF annotation files of the species, you can use \'-gff\' and \'-genome\'.\n\t\'-gff\' and \'-genome\' are followed by the annotation file GFF format of the species and the fasta format file of the genome respectively.')
     else:
         print('\tMissing parameters.\n\tIf you do not have the species name of the \'-spe\' parameter, you must provide the corresponding \'-genome\' and \'-gff\'.')

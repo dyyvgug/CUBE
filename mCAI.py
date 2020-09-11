@@ -10,8 +10,8 @@ from scipy import stats
 
 
 parser = argparse.ArgumentParser(description='Calculate mCAI.', prog='mCAI', usage='%(prog)s [options]')
-parser.add_argument('-spe', nargs='?', required=True, type=str, help='The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans.')
-parser.add_argument('-inp', nargs='?', required=True, type=str, help='The FASTA file of the gene sequence that wants to calculate the mCAI value.')
+parser.add_argument('-spe', nargs='?', required=True, type=str, help='The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans')
+parser.add_argument('-inp', nargs='?', required=True, type=str, help='The FASTA file of the gene sequences that wants to calculate the mCAI value')
 args = parser.parse_args()
 
 
@@ -60,7 +60,7 @@ def cal_mcai(file, species):
         weight_file.close()
         CAI_file.close()
     else:
-        print('\tThe calculation of this species is not supported, and the species that supports calculation are mentioned in the \'sup_spe.txt\'.\n\t If you have the genome and GFF annotation files of the species, you can generate weight from the cal_RSCU.py and cal_weight.R file, and then use the script to calculate the mCAI value')
+        print('\tThe calculation of this species is not supported, and the species that supports calculation are mentioned in the \'supported_species.txt\'.\n\t If you have the genome and GFF annotation files of the species, you can generate weight from the cal_RSCU.py and cal_weight.R file, and then use the script to calculate the mCAI value')
 
 
 if __name__ == '__main__':

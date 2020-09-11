@@ -20,7 +20,7 @@ import get_weight as rs
 
 parser = argparse.ArgumentParser(description='Calculate mCAI.', prog='mCAI', usage='%(prog)s [options]')
 parser.add_argument('-spe', nargs='?', type=str, help='The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans')
-parser.add_argument('-inp', nargs='?', required=True, type=str, help='The FASTA file of genes sequence that you want to calculate the mCAI value')
+parser.add_argument('-inp', nargs='?', required=True, type=str, help='The FASTA file of gene sequences that you want to calculate the mCAI value')
 parser.add_argument('-genome', nargs='?', type=str, help='The FASTA file of the species genome')
 parser.add_argument('-gff', nargs='?', type=str, help='The annotation file GFF3 format of the species')
 args = parser.parse_args()
@@ -80,7 +80,7 @@ if __name__ == '__main__':
             wei_file = open('{}{}_weight.txt'.format(we_path, args.spe), 'r')
             cal_mcai(args.inp, wei_file)
         else:
-            print('\tThe calculation of this species is not supported, and the species that supports calculation are mentioned in the \'sup_spe.txt\'.\n\t If you have the genome and GFF annotation files of the species, you can use \'-gff\' and \'-genome\'.\n\t\'-gff\' and \'-genome\' are followed by the annotation file GFF format of the species and the fasta format file of the genome respectively.')
+            print('\tThe calculation of this species is not supported, and the species that supports calculation are mentioned in the \'supported_species.txt\'.\n\t If you have the genome and GFF annotation files of the species, you can use \'-gff\' and \'-genome\'.\n\t\'-gff\' and \'-genome\' are followed by the annotation file GFF format of the species and the fasta format file of the genome respectively.')
     else:
         print('\tMissing parameters.\nIf you do not have the species name of the \'-spe\' parameter, you must provide the corresponding \'-genome\' and \'-gff\'.')
 
