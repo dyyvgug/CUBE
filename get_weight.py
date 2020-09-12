@@ -7,7 +7,7 @@ import os
 try:
     import rpy2.robjects as robjects
 except:
-    os.system('pip install rpy2.robjects')
+    os.system('pip install rpy2')
     import rpy2.robjects as robjects
 
 
