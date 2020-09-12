@@ -43,7 +43,7 @@ On Linux bash or Windows cmd： ```python mCAI.py -spe Caenorhabditis_elegans -i
 
 &#8195;&#8195;``` C:\Users\dyy> python mCAI.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
 
-(2).If the species is not in supported_species.txt:
+(2).If the species is **not** in supported_species.txt:
 
 On Linux bash or Windows cmd： ```python mCAI_comp.py -inp input_Zo.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
 
@@ -76,6 +76,17 @@ optSeq_comp.py optional arguments:
   -res_sites3 [RES_SITES3]
                         Restriction enzyme recognition sequence
  ```
+Usage example:
+
+(1-1).If I want the host species of gene expression in **supported_species.txt**:
+
+```python optSeq_comp.py -spe Komagataella_pastoris -inp input_original_DNA.fa```
+
+(1-2).If the input sequence file is a protein sequence：
+
+```python optSeq_comp.py -spe Komagataella_pastoris -Pro -inp input_original_protein.fa```
+
+(1-3).
 
 
 
