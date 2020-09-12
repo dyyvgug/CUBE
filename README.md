@@ -25,7 +25,21 @@ mCAI_comp.py optional arguments:
   -genome [GENOME]  The FASTA file of the species genome
   -gff [GFF]        The annotation file GFF3 format of the species
 ```
-&#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in supported_species.txt. The ```-inp``` parameter is followed by the gene sequences for which the mCAI value needs to be calculated. The example sequences is in the example_files folder.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
+&#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in **supported_species.txt**. The ```-inp``` parameter is followed by the gene sequences for which the mCAI value needs to be calculated. The example sequences is in the **example_files folder**.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
+
+Usage example:
+
+(1). If the species name I plan to calculate is in the **supported_species.txt**:
+On Linux bash or Windows cmd： ```python mCAI.py -spe Caenorhabditis_elegans -inp input_Ce.fa```
+
+If the input sequence is not in the current script folder, remember to add the path.E.g:
+On Linux bash:```dyy@Workstation:~$ python mCAI.py -spe Zoogloea_oleivorans -inp /home/disk1/input_Zo.fa```
+On Windows cmd:``` C:\Users\dyy> python mCAI.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
+
+(2).If the species is not in supported_species.txt:
+On Linux bash or Windows cmd： ```python mCAI_comp.py -inp input_Zo.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
+
+
 
 
 
