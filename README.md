@@ -30,14 +30,53 @@ mCAI_comp.py optional arguments:
 Usage example:
 
 (1). If the species name I plan to calculate is in the **supported_species.txt**:
+
 On Linux bash or Windows cmd： ```python mCAI.py -spe Caenorhabditis_elegans -inp input_Ce.fa```
 
 If the input sequence is not in the current script folder, remember to add the path.E.g:
-On Linux bash:```dyy@Workstation:~$ python mCAI.py -spe Zoogloea_oleivorans -inp /home/disk1/input_Zo.fa```
-On Windows cmd:``` C:\Users\dyy> python mCAI.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
+
+On Linux bash:
+
+```dyy@Workstation:~$ python mCAI.py -spe Zoogloea_oleivorans -inp /home/disk1/input_Zo.fa```
+
+On Windows cmd:
+
+``` C:\Users\dyy> python mCAI.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
 
 (2).If the species is not in supported_species.txt:
 On Linux bash or Windows cmd： ```python mCAI_comp.py -inp input_Zo.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
+
+
+**PART2: optimize gene sequences**
+&#8195;&#8195;This optSeq_comp.py script is used to optimize gene sequences in order to increase the expression of heterologous proteins and endogenous genes.
+
+optSeq_comp.py optional arguments:
+```
+  -h, --help            show this help message and exit
+  -inp [INP]            (Required Parameters) The file name of the original sequence. The
+                        sequence default type is DNA sequence, if that is protein sequence,
+                        please add '-Pro' parameter
+  -DNA                  FASTA file for DNA sequences of genes that wish to increase expression
+  -Pro                  FASTA file for protein sequences of genes that wish to increase
+                        expression
+  -spe [SPE]            Latin name of host species, separated by an underscore, for example:
+                        Caenorhabditis_elegans
+  -genome [GENOME]      The FASTA file of the species genome
+  -gff [GFF]            The annotation file GFF3 format of the species
+  -out [OUT]            The file name of output optimized sequence.The default file name is
+                        'optimized_seq.fa'
+  -poly                 Need to remove polyN sequence
+  -res                  Need to remove restriction enzyme sites
+  -res_sites1 [RES_SITES1]
+                        Restriction enzyme recognition sequence
+  -res_sites2 [RES_SITES2]
+                        Restriction enzyme recognition sequence
+  -res_sites3 [RES_SITES3]
+                        Restriction enzyme recognition sequence
+ ```
+
+
+
 
 
 
