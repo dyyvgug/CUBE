@@ -33,21 +33,23 @@ Usage example:
 
 On Linux bash or Windows cmd： ```python mCAI.py -spe Caenorhabditis_elegans -inp input_Ce.fa```
 
-If the input sequence is not in the current script folder, remember to add the path.E.g:
+&#8195;&#8195;If the input sequence is not in the current script folder, remember to add the path.E.g:
 
-On Linux bash:
+&#8195;&#8195;On Linux bash:
 
-```dyy@Workstation:~$ python mCAI.py -spe Zoogloea_oleivorans -inp /home/disk1/input_Zo.fa```
+&#8195;&#8195;```dyy@Workstation:~$ python mCAI.py -spe Zoogloea_oleivorans -inp /home/disk1/input_Zo.fa```
 
-On Windows cmd:
+&#8195;&#8195;On Windows cmd:
 
-``` C:\Users\dyy> python mCAI.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
+&#8195;&#8195;``` C:\Users\dyy> python mCAI.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
 
 (2).If the species is not in supported_species.txt:
+
 On Linux bash or Windows cmd： ```python mCAI_comp.py -inp input_Zo.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
 
 
 **PART2: optimize gene sequences**
+
 &#8195;&#8195;This optSeq_comp.py script is used to optimize gene sequences in order to increase the expression of heterologous proteins and endogenous genes.
 
 optSeq_comp.py optional arguments:
