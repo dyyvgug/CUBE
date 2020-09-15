@@ -78,15 +78,15 @@ optSeq_comp.py optional arguments:
  ```
 Usage example:
 
-(1-1).If I want the host species of gene expression in **supported_species.txt**:
+(1).If I want the host species of gene expression in **supported_species.txt**:
 
 ```python optSeq_comp.py -spe Komagataella_pastoris -inp input_original_DNA.fa```
 
-(1-2).If the input sequence file is a protein sequence：
+(2).If the input sequence file contains protein sequences：
 
 ```python optSeq_comp.py -spe Komagataella_pastoris -Pro -inp input_original_protein.fa```
 
-(1-3).
+(3).
 
 
 
