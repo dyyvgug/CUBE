@@ -31,11 +31,11 @@ parser.add_argument('-poly', action='store_true',
                     help='Need to remove polyN sequence')
 parser.add_argument('-res', action='store_true',
                     help='Need to remove restriction enzyme sites')
-parser.add_argument('-res_sites1', nargs='?', type=str, default=None,
+parser.add_argument('-res_sites1', type=str, default=None,
                     help='Restriction enzyme recognition sequence')
-parser.add_argument('-res_sites2', nargs='?', type=str, default=None,
+parser.add_argument('-res_sites2', type=str, default=None,
                     help='Restriction enzyme recognition sequence')
-parser.add_argument('-res_sites3', nargs='?', type=str, default=None,
+parser.add_argument('-res_sites3', type=str, default=None,
                     help='Restriction enzyme recognition sequence')
 
 args = parser.parse_args()
@@ -125,10 +125,8 @@ def hete(dataSource, species, sourceType, poly, res, res_sites1, res_sites2, res
     RSCU_table = []
     for i in species:
         RSCU_table.append(i.strip().split('\t'))
-        # print('RSCU_table: ', RSCU_table)
     for j in RSCU_table:
         aa_codon_fre[j[1]] = {j[0]: j[4]}
-
     optimalA = max(decimal.Decimal(x['A']) for x in aa_codon_fre.values() if
                    'A' in x)  # First determine if it exists, otherwise a keyerror will occur.
     keyA = list(aa_codon_fre.keys())[list(aa_codon_fre.values()).index({'A': str(optimalA)})]
@@ -222,7 +220,7 @@ def hete(dataSource, species, sourceType, poly, res, res_sites1, res_sites2, res
 
 
 def findrep(polyN, seq, sub_dic):
-    pN = re.compile(polyN)
+    pN = re.compile(str(polyN))
     pos_list = []
     while len(pN.findall(seq)):
         for m in pN.finditer(seq):
@@ -260,7 +258,8 @@ if __name__ == '__main__':
 
     if args.spe is None and args.genome is not None and args.gff is not None:
         weight = wei.read_file(args.genome, args.gff)
-        opt = hete(dataSource=args.inp.read(), species=weight, sourceType=typ, poly=args.poly, res=args.res,
+        weight2 = weight[:-1]
+        opt = hete(dataSource=args.inp.read(), species=weight2, sourceType=typ, poly=args.poly, res=args.res,
                    res_sites1=args.res_sites1, res_sites2=args.res_sites2, res_sites3=args.res_sites3)
         with open(args.out, 'w') as fi:
             fi.write(opt)

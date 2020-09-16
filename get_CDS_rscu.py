@@ -122,7 +122,7 @@ def calc_freq(codon_count, rscu):
                 freq = 0.0
                 RSCU = 0.0
             rscu += '{}\t{}\t{}\t{:.3f}\t{:.3f}\n'.format(aa, codon, codon_count[codon], freq, RSCU)
-    return rscu.split('\n')
+    return rscu
 
 
 def cal_rscu(cds):
@@ -147,7 +147,8 @@ def read_file(fna, gff):
     fa = open('{}'.format(fna), 'r')
     gf = open('{}'.format(gff), 'r')
     cds = ext_CDS(fna=fa, gff=gf)
-    cal_rscu(cds)
+    result2 = cal_rscu(cds)
+    return result2.split('\n')
 
 
 
