@@ -27,7 +27,9 @@ mCAI_comp.py optional arguments:
 ```
 &#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in **supported_species.txt**. The ```-inp``` parameter is followed by the gene sequences for which the mCAI value needs to be calculated. The example sequences is in the **example_files folder**.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
 
+##############
 Usage example:
+##############
 
 (1). If the species name I plan to calculate is in the **supported_species.txt**:
 
@@ -76,31 +78,30 @@ optSeq_comp.py optional arguments:
   -res_sites3 [RES_SITES3]
                         Restriction enzyme recognition sequence
  ```
+&#8195;&#8195;Among them,if the ```-DNA``` and ```-Pro``` parameters are not added, the default is ```-DNA```.That is, the input original gene sequences are DNA sequences.Here are examples of usage：
+
+##############
 Usage example:
+##############
 
 (1).If I want the host species of gene expression in **supported_species.txt**:
 
-```python optSeq_comp.py -spe Komagataella_pastoris -inp input_original_DNA.fa```
+```python optSeq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa```
 
 (2).If the input sequence file contains protein sequences：
 
 ```python optSeq_comp.py -spe Komagataella_pastoris -Pro -inp input_original_protein.fa```
 
-(3).
+(3).If you want optimized sequences to avoid the polyN signal (polyA is known to cause premature termination of transcription and translation):
 
+```python optSeq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa -poly```
 
+(4).If you want optimized sequences without corresponding restriction enzyme sites：
 
+```python optSeq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa -res -res_sites1 "GAATTC"```
 
+(5).If the species is **not** in supported_species.txt:
 
-
-
-
-
-
-
-
-
-
-
+```python optSeq_comp.py -inp input_original_DNA.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
 
 
