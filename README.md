@@ -28,7 +28,9 @@ mCAI_comp.py optional arguments:
 &#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in **supported_species.txt**. The ```-inp``` parameter is followed by the gene sequences for which the mCAI value needs to be calculated. The example sequences is in the **example_files folder**.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
 
 ##############
+
 Usage example:
+
 ##############
 
 (1). If the species name I plan to calculate is in the **supported_species.txt**:
@@ -81,7 +83,9 @@ optSeq_comp.py optional arguments:
 &#8195;&#8195;Among them,if the ```-DNA``` and ```-Pro``` parameters are not added, the default is ```-DNA```.That is, the input original gene sequences are DNA sequences.Here are examples of usage：
 
 ##############
+
 Usage example:
+
 ##############
 
 (1).If I want the host species of gene expression in **supported_species.txt**:
@@ -104,4 +108,5 @@ Usage example:
 
 ```python optSeq_comp.py -inp input_original_DNA.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
 
-
+------
+&#8195;&#8195;Thank you and best wishes！
