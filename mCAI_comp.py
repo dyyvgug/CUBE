@@ -23,11 +23,13 @@ parser.add_argument('-spe', nargs='?', type=str, help='The Latin name of the spe
 parser.add_argument('-inp', nargs='?', required=True, type=str, help='The FASTA file of gene sequences that you want to calculate the mCAI value')
 parser.add_argument('-genome', nargs='?', type=str, help='The FASTA file of the species genome')
 parser.add_argument('-gff', nargs='?', type=str, help='The annotation file GFF3 format of the species')
+parser.add_argument('-o', nargs='?', type=str, default='mCAI.txt',
+                    help='The file name of output mCAI value.The default file name is \'mCAI.txt\'')
 args = parser.parse_args()
 
 
-def cal_mcai(file, species):
-    CAI_file = open('mCAI.txt', 'w')
+def cal_mcai(file, species, out):
+    CAI_file = open(out, 'w')
     weight_table = []
     for line in species:
         weight_table.append(line.strip().split('\t'))
@@ -64,7 +66,7 @@ if __name__ == '__main__':
     #print("Current path is %s" % (os.path.abspath(sys.argv[0])))
     if args.spe is None and args.genome is not None and args.gff is not None:
         rrs = rs.read_file(args.genome, args.gff)
-        cal_mcai(args.inp, rrs)
+        cal_mcai(args.inp, rrs, args.o)
     elif args.spe is None and args.genome is None and args.gff is None:
         print('\tThere are no parameters for \'-spe\',\'-genome\', and \'-gff\'.\n\tIf the species you need to calculate is in \'sup_spe.txt\', please follow the name after the \'-spe\' parameter.\n\tIf the calculation of the species is not supported, use \'-genome\' and \'-gff\' followed by genome and annotation files')
     elif args.spe is not None and args.genome is None and args.gff is None:
@@ -76,9 +78,9 @@ if __name__ == '__main__':
             os.chdir('./')
             we_path = './resource/weight/'
 
-        if os.path.exists('{}{}_weight.txt'.format(we_path, args.spe)):
-            wei_file = open('{}{}_weight.txt'.format(we_path, args.spe), 'r')
-            cal_mcai(args.inp, wei_file)
+        if os.path.exists('{}{}'.format(we_path, args.spe)):
+            wei_file = open('{}{}'.format(we_path, args.spe), 'r')
+            cal_mcai(args.inp, wei_file, args.o)
         else:
             print('\tThe calculation of this species is not supported, and the species that supports calculation are mentioned in the \'supported_species.txt\'.\n\t If you have the genome and GFF annotation files of the species, you can use \'-gff\' and \'-genome\'.\n\t\'-gff\' and \'-genome\' are followed by the annotation file GFF format of the species and the fasta format file of the genome respectively.')
     else:

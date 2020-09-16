@@ -25,7 +25,7 @@ parser.add_argument('-Pro', action='store_true',
 parser.add_argument('-spe', nargs='?', type=str, help='Latin name of host species, separated by an underscore, for example: Caenorhabditis_elegans')
 parser.add_argument('-genome', nargs='?', type=str, help='The FASTA file of the species genome')
 parser.add_argument('-gff', nargs='?', type=str, help='The annotation file GFF3 format of the species')
-parser.add_argument('-out', nargs='?', type=str, default='optimized_seq.fa',
+parser.add_argument('-o', nargs='?', type=str, default='optimized_seq.fa',
                     help='The file name of output optimized sequence.The default file name is \'optimized_seq.fa\'')
 parser.add_argument('-poly', action='store_true',
                     help='Need to remove polyN sequence')
@@ -261,7 +261,7 @@ if __name__ == '__main__':
         weight2 = weight[:-1]
         opt = hete(dataSource=args.inp.read(), species=weight2, sourceType=typ, poly=args.poly, res=args.res,
                    res_sites1=args.res_sites1, res_sites2=args.res_sites2, res_sites3=args.res_sites3)
-        with open(args.out, 'w') as fi:
+        with open(args.o, 'w') as fi:
             fi.write(opt)
         fi.close()
     elif args.spe is None and args.genome is None and args.gff is None:
@@ -275,11 +275,11 @@ if __name__ == '__main__':
             os.chdir('./')
             r_path = './resource/RSCU/'
 
-        if os.path.exists('{}{}_RSCU.txt'.format(r_path, args.spe)):
-            RSCU = open('{}{}_RSCU.txt'.format(r_path, args.spe), 'r')
+        if os.path.exists('{}{}'.format(r_path, args.spe)):
+            RSCU = open('{}{}'.format(r_path, args.spe), 'r')
             opt = hete(dataSource=args.inp.read(), species=RSCU, sourceType=typ, poly=args.poly, res=args.res,
                        res_sites1=args.res_sites1, res_sites2=args.res_sites2, res_sites3=args.res_sites3)
-            with open(args.out, 'w') as fi:
+            with open(args.o, 'w') as fi:
                 fi.write(opt)
             fi.close()
         else:

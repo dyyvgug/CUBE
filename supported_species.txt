@@ -692,7 +692,6 @@ Alkalispirochaeta_odontotermitis
 Alkalispirochaeta_sphaeroplastigenens
 Alkalitalea_saponilacus
 Alkanindiges_illinoisensis_DSM_15370
-all_name.txt
 Alligator_mississippiensis
 Alligator_sinensis
 Allisonella_histaminiformans
@@ -5694,6 +5693,7 @@ Komagataeibacter_saccharivorans
 Komagataeibacter_sucrofermentans
 Komagataeibacter_swingsii
 Komagataeibacter_xylinus_E25
+Komagataella_pastoris
 Komagataella_phaffii_GS115
 Kordia_algicida_OT_1
 Kordia_antarctica
@@ -11173,7 +11173,6 @@ Sparus_aurata
 Spathaspora_passalidarum_NRRL_Y_27907
 Spathaspora_sp._JA1
 Spatholobus_suberectus
-spe_log.txt
 Sphaceloma_murrayae
 Sphaeramia_orbicularis
 Sphaerisporangium_album

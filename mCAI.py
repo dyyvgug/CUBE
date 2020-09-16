@@ -12,10 +12,12 @@ from scipy import stats
 parser = argparse.ArgumentParser(description='Calculate mCAI.', prog='mCAI', usage='%(prog)s [options]')
 parser.add_argument('-spe', nargs='?', required=True, type=str, help='The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans')
 parser.add_argument('-inp', nargs='?', required=True, type=str, help='The FASTA file of the gene sequences that wants to calculate the mCAI value')
+parser.add_argument('-o', nargs='?', type=str, default='mCAI.txt',
+                    help='The file name of output mCAI value.The default file name is \'mCAI.txt\'')
 args = parser.parse_args()
 
 
-def cal_mcai(file, species):
+def cal_mcai(file, species, out):
     syst = platform.system()
     if syst == "Windows":
         os.chdir('.\\')
@@ -24,9 +26,9 @@ def cal_mcai(file, species):
         os.chdir('./')
         we_path = './resource/weight/'
 
-    if os.path.exists('{}{}_weight.txt'.format(we_path, species)):
-        weight_file = open('{}{}_weight.txt'.format(we_path, species), 'r')
-        CAI_file = open('{}_mCAI.txt'.format(species), 'w')
+    if os.path.exists('{}{}'.format(we_path, species)):
+        weight_file = open('{}{}'.format(we_path, species), 'r')
+        CAI_file = open(out, 'w')
 
         weight_table = []
         for line in weight_file:
@@ -64,4 +66,4 @@ def cal_mcai(file, species):
 
 
 if __name__ == '__main__':
-    cal_mcai(args.inp, args.spe)
+    cal_mcai(args.inp, args.spe, args.o)

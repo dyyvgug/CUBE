@@ -16,6 +16,7 @@ mCAI.py optional arguments:
   -h, --help        show this help message and exit
   -spe [SPE]        The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans
   -inp [INP]        The FASTA file of the gene sequences that wants to calculate the mCAI value
+  -o [O]              The file name of output mCAI value.The default file name is 'mCAI.txt'
 ```
 mCAI_comp.py optional arguments:
 ```
@@ -24,6 +25,7 @@ mCAI_comp.py optional arguments:
   -inp [INP]        The FASTA file of gene sequences that you want to calculate the mCAI value
   -genome [GENOME]  The FASTA file of the species genome
   -gff [GFF]        The annotation file GFF3 format of the species
+  -o [O]              The file name of output mCAI value.The default file name is 'mCAI.txt'
 ```
 &#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in **supported_species.txt**. The ```-inp``` parameter is followed by the gene sequences for which the mCAI value needs to be calculated. The example sequences is in the **example_files folder**.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
 
@@ -69,8 +71,8 @@ optSeq_comp.py optional arguments:
                         Caenorhabditis_elegans
   -genome [GENOME]      The FASTA file of the species genome
   -gff [GFF]            The annotation file GFF3 format of the species
-  -out [OUT]            The file name of output optimized sequence.The default file name is
-                        'optimized_seq.fa'
+  -o [O]              The file name of output optimized sequence.The default file name is
+                          'optimized_seq.fa'
   -poly                 Need to remove polyN sequence
   -res                  Need to remove restriction enzyme sites
   -res_sites1 [RES_SITES1]
