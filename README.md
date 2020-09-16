@@ -7,6 +7,7 @@
 
 &#8195;&#8195;CAFE is mainly divided into two parts.The first part is used to calculate the mCAI value, and the second part is used to optimize the gene sequence to increase the amount of gene expression.
 
+-----
 **PART1: calculate mCAI value**
 
 &#8195;&#8195;If the species name you plan to calculate is in the **supported_species.txt**, you can use the mCAI.py script to calculate.If the species is not in supported_species.txt, you can use the mCAI_comp.py script to calculate, but the **rpy2** dependent library is difficult to install on Windows.
@@ -53,7 +54,7 @@ On Linux bash or Windows cmd： ```python mCAI.py -spe Caenorhabditis_elegans -i
 
 On Linux bash or Windows cmd： ```python mCAI_comp.py -inp input_Zo.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
 
-
+-----
 **PART2: optimize gene sequences**
 
 &#8195;&#8195;This optSeq_comp.py script is used to optimize gene sequences in order to increase the expression of heterologous proteins and endogenous genes.
