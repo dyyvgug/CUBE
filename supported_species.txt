@@ -3914,7 +3914,7 @@ Ensifer_aridi
 Ensifer_glycinis
 Ensifer_sojae_CCBAU_05684
 Entamoeba_dispar_SAW760
-Entamoeba_histolytica_HM_1%3AIMSS
+Entamoeba_histolytica_HM-1_IMSS
 Entamoeba_invadens_IP1
 Entamoeba_nuttalli_P19
 Enteractinococcus_coprophilus
@@ -6330,7 +6330,7 @@ Liberibacter_crescens_BT_1
 Lichenibacterium_minor
 Lichenibacterium_ramalinae
 Lichenihabitans_psoromatis
-Lichtheimia_corymbifera_JMRC%3AFSU%3A9682
+Lichtheimia_corymbifera_JMRC_FSU_9682
 Lichtheimia_ramosa
 Lihuaxuella_thermophila
 Limihaloglobus_sulfuriphilus
@@ -9239,7 +9239,7 @@ Photobacterium_iliopiscarium
 Photobacterium_indicum
 Photobacterium_jeanii
 Photobacterium_kishitanii
-Photobacterium_leiognathi_subsp._mandapamensis_svers.1.1%2E
+Photobacterium_leiognathi_subsp.mandapamensis_svers.1.1
 Photobacterium_lipolyticum
 Photobacterium_lutimaris
 Photobacterium_marinum
@@ -9937,7 +9937,7 @@ Pseudomonas_pelagia_CL_AP6
 Pseudomonas_peli
 Pseudomonas_pharmafabricae
 Pseudomonas_plecoglossicida
-Pseudomonas_poae_RE%2A1_1_14
+Pseudomonas_poae_RE_1-1-14
 Pseudomonas_pohangensis
 Pseudomonas_profundi
 Pseudomonas_prosekii
@@ -10849,7 +10849,7 @@ Salisediminibacterium_halotolerans
 Saliterribacillus_persicus
 Salmo_salar
 Salmo_trutta
-Salmonella_bongori_serovar_48%3Az81%3A_
+Salmonella_bongori_serovar_48_z41_--str.RKS3044
 Salmonella_enterica_subsp._enterica_serovar_Typhi_str._CT18
 Salpingoeca_rosetta
 Salsuginibacillus_halophilus
