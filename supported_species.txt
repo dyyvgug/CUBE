@@ -989,7 +989,7 @@ Antricoccus_suffuscus
 Antrostomus_carolinensis
 Aotus_nancymaae
 Apaloderma_vittatum
-Aphanizomenon_flos_aquae_NIES_81
+Aphanizomenon_flos-aquae
 Aphanomyces_astaci
 Aphanomyces_invadans
 Aphanothece_cf._minutissima_CCALA_015
@@ -1007,7 +1007,6 @@ Apis_dorsata
 Apis_florea
 Apis_mellifera
 Aplysia_californica
-apodya_prolifera_JEL478
 Apostasia_shenzhenica
 Apostichopus_japonicus
 Aptenodytes_forsteri
@@ -1265,8 +1264,6 @@ Aspergillus_versicolor_CBS_583.65
 Aspergillus_violaceofuscus_CBS_115571
 Aspergillus_welwitschiae
 Aspergillus_wentii_DTO_134E9
-aspora_margarita
-aspora_rosea
 Astatotilapia_calliptera
 Aster_yellows_witches_broom_phytoplasma_AYWB
 Asterias_rubens
@@ -1290,7 +1287,6 @@ Atopobium_parvulum_DSM_20469
 Atopobium_rimae_ATCC_49626
 Atopobium_vaginae_PB189_T1_4
 Atopococcus_tabaci_DSM_17538
-atoporia_subvermispora_B
 Atopostipes_suicloacalis_DSM_15692
 Atta_cephalotes
 Atta_colombica
@@ -1821,7 +1817,7 @@ Bifidobacterium_vespertilionis
 Bifidobacterium_xylocopae
 Bifiguratus_adelaidae
 Bilophila_wadsworthia_ATCC_49260
-Bimuria_novae_zelandiae_CBS_107.79
+Bimuria_novae-zelandiae
 Biomphalaria_glabrata
 Biostraticola_tofi
 Bipolaris_sorokiniana_ND90Pr
@@ -2487,7 +2483,7 @@ Ceratosolen_solmsi_marchali
 Ceratotherium_simum_simum
 Cercocebus_atys
 Cercospora_beticola
-Cercospora_zeae_maydis_SCOH1_5
+Cercospora_zeae-maydis
 Cercospora_zeina
 Cereibacter_changlensis
 Cervus_elaphus_hippelaphus
@@ -2722,7 +2718,6 @@ Chthoniobacter_flavus_Ellin428
 Chthonomonas_calidirosea_T49
 Cicer_arietinum
 Ciceribacter_lividus
-cilariopsis_chorda
 Cimex_lectularius
 Cinara_cedri
 Cinnamomum_micranthum_f._kanehirae
@@ -3697,7 +3692,7 @@ Dokdonia_pacifica
 Dokdonia_sinensis
 Dolichospermum_circinale_AWQC131C
 Dolichospermum_compactum_NIES_806
-Dolichospermum_flos_aquae_CCAP_1403_13F
+Dolichospermum_flos-aquae
 Dolichospermum_planctonicum
 Dolosicoccus_paucivorans
 Dolosigranulum_pigrum_ATCC_51524
@@ -4027,7 +4022,6 @@ Eremococcus_coleocola_ACS_139_V_Col8
 Eremomyces_bilateralis_CBS_781.70
 Eremothecium_cymbalariae_DBVPG
 Eremothecium_gossypii_ATCC_10895
-erina_marginata_CBS_339.88
 Erinaceus_europaeus
 Erpetoichthys_calabaricus
 Erwinia_amylovora_CFBP1430
@@ -4109,6 +4103,7 @@ Eubacterium_uniforme
 Eubacterium_xylanophilum_ATCC_35991
 Eubacterium_yurii_subsp._margaretiae_ATCC_43715
 Eucalyptus_grandis
+Eucalyptus_marginata
 Eudoraea_adriatica_DSM_19308
 Eudyptes_chrysocome
 Eudyptes_chrysolophus
@@ -4234,7 +4229,6 @@ Fictibacillus_gelatini_DSM_15865
 Fictibacillus_macauensis_ZFHKF_1
 Fictibacillus_phosphorivorans
 Fictibacillus_solisalsi
-filamentous_cyanobacterium_ESFC_1
 Filibacter_tadaridae
 Filifactor_alocis_ATCC_35896
 Filimonas_endophytica
@@ -4577,6 +4571,7 @@ Gavia_stellata
 Gavialis_gangeticus
 Gayadomonas_joobiniege_G7
 Gekko_japonicus
+Gelatoporia_subvermispora
 Gelidibacter_algens
 Gelidibacter_gilvus
 Gelidibacter_japonicus
@@ -4608,6 +4603,7 @@ Gemmobacter_intermedius
 Gemmobacter_lutimaris
 Gemmobacter_megaterium
 Gemmobacter_nectariphilus_DSM_15620
+Genlisea_aurea
 Geoalkalibacter_ferrihydriticus_DSM_17813
 Geoalkalibacter_subterraneus
 Geobacillus_galactosidasius
@@ -4681,6 +4677,7 @@ Ghiorsea_bivora
 Giardia_lamblia_ATCC_50803
 Gibbsiella_quercinecans
 Giesbergeria_anulus
+Gigaspora_margarita
 Gilliamella_apicola
 Gilliamella_apis
 Gilliamella_bombi
@@ -4752,6 +4749,8 @@ Glycomyces_paridis
 Glycomyces_sambucus
 Glycomyces_tenuis_DSM_44171
 Glycomyces_xiaoerkulensis
+Golovinomyces_cichoracearum
+Gonapodya_prolifera
 Gopherus_evgoodei
 Gordonia_aichiensis_NBRC_108223
 Gordonia_alkanivorans
@@ -4789,11 +4788,13 @@ Gorilla_gorilla_gorilla
 Gorillibacterium_massiliense
 Gorillibacterium_timonense
 Gossypium_arboreum
+Gossypium_australe
 Gossypium_hirsutum
 Gossypium_raimondii
 Gottschalkia_acidurici_9a
 Gottschalkia_purinilytica
 Gouania_willdenowi
+Gracilariopsis_chorda
 Gracilibacillus_boraciitolerans_JCM_21714
 Gracilibacillus_dipsosauri
 Gracilibacillus_halophilus_YIM_C55.5
@@ -4845,6 +4846,7 @@ Gulosibacter_chungangensis
 Gulosibacter_molinativorax_DSM_13485
 Guyparkeria_halophila
 Gymnodraco_acuticeps
+Gymnopus_androsaceus
 Gynuella_sunshinyii_YC6258
 Gynurincola_endophyticus
 Habropoda_laboriosa
@@ -6214,8 +6216,8 @@ Leptospira_alstonii
 Leptospira_andrefontaineae
 Leptospira_bandrabouensis
 Leptospira_barantonii
-Leptospira_biflexa_serovar_Patoc_strain_Patoc_1_Paris
-Leptospira_borgpetersenii_serovar_Hardjo_bovis_str._L550
+Leptospira_biflexa
+Leptospira_borgpetersenii
 Leptospira_bourretii
 Leptospira_bouyouniensis
 Leptospira_brenneri
@@ -6360,7 +6362,6 @@ Lingula_anatina
 Liparis_tanakae
 Lipomyces_starkeyi_NRRL_Y_11557
 Lipotes_vexillifer
-lisea_aurea
 Lishizhenia_tianjinensis
 Listeria_aquatica_FSL_S10_1188
 Listeria_booriae
@@ -6838,7 +6839,7 @@ Meiothermus_taiwanensis_WR_220
 Meira_miltonrushii
 Melaminivora_alkalimesophila
 Melanaphis_sacchari
-Melanomma_pulvis_pyrius_CBS_109.77
+Melanomma_pulvis-pyrius
 Meleagris_gallopavo
 Melghiribacillus_thermohalophilus
 Melghirimyces_algeriensis
@@ -6856,7 +6857,7 @@ Meriones_unguiculatus
 Merismopedia_glauca_CCAP_1448_3
 Merops_nubicus
 Mesitornis_unicolor
-Mesoaciditoga_lauensis_cd_1655R__DSM_25116
+Mesoaciditoga_lauensis
 Mesobacillus_campisalis
 Mesobacillus_foraminis
 Mesobacillus_jeotgali
@@ -8250,7 +8251,6 @@ Nonomuraea_solani
 Nonomuraea_turkmeniaca
 Nonomuraea_wenchangensis
 Nonomuraea_zeae
-nopus_androsaceus_JB14
 nopus_luxurians_FD_317_M1
 Nosema_apis_BRL_01
 Nosema_bombycis_CQ1
@@ -8504,7 +8504,7 @@ Oryzihumus_leptocrescens
 Oryzisolibacter_propanilivorax
 Oryzomicrobium_terrae
 Oscillatoria_acuminata_PCC_6304
-Oscillatoria_nigro_viridis_PCC_7112
+Oscillatoria_nigro-viridis
 Oscillatoriales_cyanobacterium_JSC_12
 Oscillibacter_ruminantium_GH1
 Oscillibacter_valericigenes_Sjm18_20
@@ -8518,7 +8518,6 @@ Otariodibacter_oris
 Otolemur_garnettii
 Ottowia_oryzae
 Ottowia_thiooxydans_DSM_14619
-ovinomyces_cichoracearum
 Ovis_aries
 Oxalobacter_formigenes_HOxBLS
 Oxobacter_pfennigii
@@ -8990,7 +8989,7 @@ Paucisalibacillus_globulus_DSM_18846
 Pauljensenia_hongkongensis
 Paxillus_involutus_ATCC_200175
 Paxillus_rubicundulus_Ve08.2h10
-Peanut_witches_broom_phytoplasma_NTU2011
+Peanut_witches-broom_phytoplasma
 Pecten_maximus
 Pectinatus_cerevisiiphilus
 Pectobacterium_actinidiae
@@ -10166,7 +10165,7 @@ Pygoscelis_antarcticus
 Pyramidobacter_piscolens_W5455
 Pyrenochaeta_sp._DS3sAY3a
 Pyrenophora_seminiperda_CCB06
-Pyrenophora_tritici_repentis_Pt_1C_BFP
+Pyrenophora_tritici-repentis
 Pyricularia_oryzae_70_15
 Pyrinomonas_methylaliphatogenes
 Pyrobaculum_aerophilum_str._IM2
@@ -10213,7 +10212,7 @@ Ramazzottius_varieornatus
 Ramlibacter_henchirensis
 Ramlibacter_rhizophilus
 Ramlibacter_tataouinensis_TTB310
-Ramularia_collo_cygni
+Ramularia_collo-cygni
 Raoultella_electrica
 Raoultella_ornithinolytica
 Raoultella_planticola
@@ -12065,7 +12064,6 @@ Sulfurovum_riftiae
 Sunxiuqinia_dokdonensis
 Sunxiuqinia_elliptica
 Superficieibacter_electus
-supported_species.txt
 Suricata_suricatta
 Sus_scrofa
 Sutterella_faecalis
@@ -12095,7 +12093,6 @@ Syntrophorhabdus_aromaticivorans_UI
 Syntrophothermus_lipocalidus_DSM_12680
 Syntrophus_aciditrophicus_SB
 Syntrophus_gentianae
-sypium_australe
 Syzygium_oleosum
 Tabrizicola_aquatica
 Tabrizicola_piscis
@@ -12616,6 +12613,7 @@ Trichoderma_longibrachiatum_ATCC_18648
 Trichoderma_parareesei
 Trichoderma_reesei_QM6a
 Trichoderma_virens_Gv29_8
+Trichodesmium_erythraeum
 Trichodesmium_erythraeum_IMS101
 Trichogramma_pretiosum
 Trichomonas_vaginalis_G3
