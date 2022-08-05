@@ -37,12 +37,18 @@ def cal_mcai(file, species, out):
     for i in weight_table:
         codon_weight[i[0]] = float(i[1])
 
-    dna = ''
     weight_list = []
     CAI_file.write('gene_id\tmCAI_value\n')
-
     f = open(file, 'r')
-    for line in f:
+    f2 = f.read()
+    #print(type(f2))
+    f2 += '>'
+    f3 = f2.split('\n')
+
+    dna = ''
+    header = ''
+
+    for line in f3:
         if line.startswith('>') and dna == '':
             header = line.strip().replace('>', '')
         elif not line.startswith('>'):
@@ -53,7 +59,7 @@ def cal_mcai(file, species, out):
                 if codon in codon_weight:
                     weight_list.append(codon_weight[codon])
             CAI = stats.gmean(weight_list)
-            CAI_file.write('{}\t{}\n'.format(header, CAI))
+            CAI_file.write('{}\t{}\n'.format(header.replace('>', ''), CAI))
             header = line.strip().replace('>', '')
             dna = ''
             weight_list = []
