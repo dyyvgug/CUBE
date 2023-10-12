@@ -262,7 +262,7 @@ if __name__ == '__main__':
         opt = hete(dataSource=args.inp.read(), species=weight2, sourceType=typ, poly=args.poly, res=args.res,
                    res_sites1=args.res_sites1, res_sites2=args.res_sites2, res_sites3=args.res_sites3)
         with open(args.o, 'w') as fi:
-            fi.write(opt[])
+            fi.write(opt)
         fi.close()
     elif args.spe is None and args.genome is None and args.gff is None:
         print('\tThere are no parameters for \'-spe\',\'-genome\', and \'-gff\'.\n\tIf the species you need to calculate is in \'sup_spe.txt\', please follow the name after the \'-spe\' parameter.\n\tIf the calculation of the species is not supported, use \'-genome\' and \'-gff\' followed by genome and annotation files')

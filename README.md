@@ -1,7 +1,7 @@
-# CAFE：Codon Adaptation Facile Estimation
-### CAFE can calculate the mCAI(modified Codon Adaptation Index) value, and optimize gene sequences to increase expression.
+# CUBE：Codon Usage Bias Ensemble
+### CUBE can calculate the mCAI(modified Codon Adaptation Index) value, and optimize gene sequences to increase expression.
 ##### Created By: Yingying Dong
-##### Email: dyyvgug@163.com
+##### Email: dyyvgug@gmail.com
 
 &#8195;&#8195;Before using, please make sure that python 3.X has been installed on your computer. When using, download the repository to the local.
 
