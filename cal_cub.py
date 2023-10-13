@@ -54,7 +54,6 @@ def cal_cub(dataSource, species, output,indices):
         for line in f:
             if line.startswith('>') and dna == '':
                 header = line.strip().replace('>', '')
-                result.write('{}\t'.format(header))
             elif not line.startswith('>'):
                 dna = str.upper(dna) + line.strip()
             elif line.startswith('>') and dna != '':
@@ -74,28 +73,28 @@ def cal_cub(dataSource, species, output,indices):
                     elif i == "cbi":
                         if species == "Escherichia_coli":
                             index_list.append(cseq.cbi())
-                        elif species == "Bacillus subtilis":
+                        elif species == "Bacillus_subtilis":
                             index_list.append(cseq.cbi(1))
-                        elif species == "Saccharomyces cerevisiae":
+                        elif species == "Saccharomyces_cerevisiae_S288C":
                             index_list.append(cseq.cbi(2))
                         else:
                             index_list.append("NA")
                     elif i == "fop":
                         if species == "Escherichia_coli":
                             index_list.append(cseq.fop())
-                        elif species == "Bacillus subtilis":
+                        elif species == "Bacillus_subtilis":
                             index_list.append(cseq.fop(1))
-                        elif species == "Dictyostelium discoideum":
+                        elif species == "Dictyostelium_discoideum":
                             index_list.append(cseq.fop(2))
-                        elif species == "Aspergillus nidulans":
+                        elif species == "Aspergillus_nidulans":
                             index_list.append(cseq.fop(3))
-                        elif species == "Saccharomyces cerevisiae":
+                        elif species == "Saccharomyces_cerevisiae_S288C":
                             index_list.append(cseq.fop(4))
-                        elif species == "Drosophila melanogaster":
+                        elif species == "Drosophila_melanogaster":
                             index_list.append(cseq.fop(5))
-                        elif species == "Caenorhabditis elegans":
+                        elif species == "Caenorhabditis_elegans":
                             index_list.append(cseq.fop(6))
-                        elif species == "Neurospora crassa":
+                        elif species == "Neurospora_crassa":
                             index_list.append(cseq.fop(7))
                         else:
                             index_list.append("NA")
