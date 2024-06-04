@@ -1,34 +1,37 @@
 # CUBE：Codon Usage Bias Ensemble
-### CUBE can calculate the mCAI(modified Codon Adaptation Index) value, and optimize gene sequences to increase expression.
+### CUBE local toolkit can calculate some popular CUB indices such as the modified codon adaptation index (mCAI) value, codon bias index (CBI), effective number of codons (ENC), frequency of optimal codons (Fop), GC content at the third position of synonymous codon (GC3s).
+### Besides, CUBE toolkit also can optimize gene sequences to increase expression.
+
 ##### Created By: Yingying Dong
-##### Email: dyyvgug@gmail.com
+##### Email: dyyvgug@hotmail.com
 
 &#8195;&#8195;Before using, please make sure that python 3.X has been installed on your computer. When using, download the repository to the local.
 
-&#8195;&#8195;CAFE is mainly divided into two parts.The first part is used to calculate the mCAI value, and the second part is used to optimize the gene sequence to increase the amount of gene expression.
+&#8195;&#8195;CUBE toolkit is mainly divided into two parts.The first part is used to calculate the CUB indices, and the second part is used to optimize the gene sequence to increase the amount of gene expression.
 
 -----
-**PART1: calculate mCAI value**
+**PART1: calculate CUB indices**
 
-&#8195;&#8195;If the species name you plan to calculate is in the **supported_species.txt**, you can use the mCAI.py script to calculate.If the species is not in supported_species.txt, you can use the mCAI_comp.py script to calculate, but the **rpy2** dependent library is difficult to install on Windows.
+&#8195;&#8195;If the species name you plan to calculate is in the **supported_species.txt**, you can use the cube.py script to calculate.If the species is not in supported_species.txt, you can use the cube_comp.py script to calculate, but the **rpy2** dependent library is difficult to install on Windows.
 
-mCAI.py optional arguments:
+cube.py optional arguments:
+```
+  -h, --help        show this help message and exit
+  -cub [CUB]        The list of CUB indices that you want to calculate
+  -spe [SPE]        The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans
+  -inp [INP]        The FASTA file of the gene sequences that wants to calculate the cube value
+  -o [O]            The file name of output CUB value.The default file name is 'cube.txt'
+```
+cube_comp.py optional arguments:
 ```
   -h, --help        show this help message and exit
   -spe [SPE]        The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans
-  -inp [INP]        The FASTA file of the gene sequences that wants to calculate the mCAI value
-  -o [O]            The file name of output mCAI value.The default file name is 'mCAI.txt'
-```
-mCAI_comp.py optional arguments:
-```
-  -h, --help        show this help message and exit
-  -spe [SPE]        The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans
-  -inp [INP]        The FASTA file of gene sequences that you want to calculate the mCAI value
+  -inp [INP]        The FASTA file of gene sequences that you want to calculate the cube value
   -genome [GENOME]  The FASTA file of the species genome
   -gff [GFF]        The annotation file GFF3 format of the species
-  -o [O]            The file name of output mCAI value.The default file name is 'mCAI.txt'
+  -o [O]            The file name of output CUB value.The default file name is 'cube.txt'
 ```
-&#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in **supported_species.txt**. The ```-inp``` parameter is followed by the gene sequences for which the mCAI value needs to be calculated. The example sequences is in the **example_files folder**.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
+&#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in **supported_species.txt**. The ```-inp``` parameter is followed by the gene sequences for which the CUB indices need to be calculated. The example sequences is in the **example_files folder**.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
 
 ##############
 
@@ -38,21 +41,21 @@ Usage example:
 
 (1). If the species name I plan to calculate is in the **supported_species.txt**:
 
-On Linux bash or Windows cmd： ```python mCAI.py -spe Caenorhabditis_elegans -inp input_Ce.fa```
+On Linux bash or Windows cmd： ```python cube.py -spe Caenorhabditis_elegans -inp input_Ce.fa```
 
 &#8195;&#8195;If the input sequence is not in the current script folder, remember to add the path.E.g:
 
 &#8195;&#8195;On Linux bash:
 
-&#8195;&#8195;```dyy@Workstation:~$ python mCAI.py -spe Zoogloea_oleivorans -inp /home/disk1/input_Zo.fa```
+&#8195;&#8195;```dyy@Workstation:~$ python cube.py -spe Zoogloea_oleivorans -inp /home/disk1/input_Zo.fa```
 
 &#8195;&#8195;On Windows cmd:
 
-&#8195;&#8195;``` C:\Users\dyy> python mCAI.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
+&#8195;&#8195;``` C:\Users\dyy> python cube.py -spe Zoogloea_oleivorans -inp G:\github\CAFE\example_files\PART1\input_Zo.fa```
 
 (2).If the species is **not** in supported_species.txt:
 
-On Linux bash or Windows cmd： ```python mCAI_comp.py -inp input_Zo.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
+On Linux bash or Windows cmd： ```python cube_comp.py -inp input_Zo.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
 
 -----
 **PART2: optimize gene sequences**
