@@ -1,8 +1,0 @@
-LICENSE
-README.md
-setup.py
-cube_tool.egg-info/PKG-INFO
-cube_tool.egg-info/SOURCES.txt
-cube_tool.egg-info/dependency_links.txt
-cube_tool.egg-info/requires.txt
-cube_tool.egg-info/top_level.txt

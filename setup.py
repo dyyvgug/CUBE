@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="cube tool",
+    name="cube toolkit",
     version="1.0",
-    description='a tool to calculate mCAI and optimize sequences',
-    url='https://github.com/dyyvgug/mCAI',
+    description='A tool to calculate CUB indices and optimize sequences',
+    url='https://github.com/dyyvgug/CUBE',
     author='Yingying Dong',
     author_email='dyyvgug@gmail.com',
     packages=find_packages(),
-    install_requires=['rpy2'],
+    install_requires=['scipy','rpy2','codonw'],
     data_files=[('resource', ['resource/RSCU/*.txt', 'resource/weight/*'])],
 )
