@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding:utf-8
-# Yingying Dong.2020-8-12.Modify:2020-8-23.
+# Yingying Dong. To extra the CDS and calculate RSCU.
 
 import re
 
