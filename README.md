@@ -63,7 +63,7 @@ On Linux bash or Windows cmd： ```python cube_comp.py -inp input_Zo.fa -gff Zoo
 
 &#8195;&#8195;This optSeq_comp.py script is used to optimize gene sequences in order to increase the expression of heterologous proteins and endogenous genes.
 
-optSeq_comp.py optional arguments:
+opt_seq_comp.py optional arguments:
 ```
   -h, --help            show this help message and exit
   -inp [INP]            (Required Parameters) The file name of the original sequence. The
@@ -97,23 +97,23 @@ Usage example:
 
 (1).If I want the host species of gene expression in **supported_species.txt**:
 
-```python optSeq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa```
+```python opt_seq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa```
 
 (2).If the input sequence file contains protein sequences：
 
-```python optSeq_comp.py -spe Komagataella_pastoris -Pro -inp input_original_protein.fa```
+```python opt_seq_comp.py -spe Komagataella_pastoris -Pro -inp input_original_protein.fa```
 
 (3).If you want optimized sequences to avoid the polyN signal (polyA is known to cause premature termination of transcription and translation):
 
-```python optSeq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa -poly```
+```python opt_seq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa -poly```
 
 (4).If you want optimized sequences without corresponding restriction enzyme sites：
 
-```python optSeq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa -res -res_sites1 "GAATTC"```
+```python opt_seq_comp.py -spe Komagataella_pastoris -DNA -inp input_original_DNA.fa -res -res_sites1 "GAATTC"```
 
 (5).If the species is **not** in supported_species.txt:
 
-```python optSeq_comp.py -inp input_original_DNA.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
+```python opt_seq_comp.py -inp input_original_DNA.fa -gff Zoogloea_oleivorans.gff -genome Zoogloea_oleivorans.fna```
 
 ------
 &#8195;&#8195;Thank you and best wishes！
