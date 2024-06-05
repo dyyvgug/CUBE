@@ -61,7 +61,7 @@ On Linux bash or Windows cmd： ```python cube_comp.py -inp input_Zo.fa -gff Zoo
 -----
 **PART2: optimize gene sequences**
 
-&#8195;&#8195;This optSeq_comp.py script is used to optimize gene sequences in order to increase the expression of heterologous proteins and endogenous genes.
+&#8195;&#8195;This opt_seq_comp.py script is used to optimize gene sequences in order to increase the expression of heterologous proteins and endogenous genes.
 
 opt_seq_comp.py optional arguments:
 ```
