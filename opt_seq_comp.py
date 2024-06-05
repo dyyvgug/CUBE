@@ -16,7 +16,7 @@ import get_CDS_rscu as wei
 
 parser = argparse.ArgumentParser(description='Change DNA sequence to improve expression.v1.0', prog='change_opt',
                                  usage='%(prog)s [options]')
-parser.add_argument('-inp', nargs='?', type=argparse.FileType('r'), required=True,
+parser.add_argument('-i', nargs='?', type=argparse.FileType('r'), required=True,
                     help='(Required Parameters) The file name of the original sequence.\n\tThe sequence default type is DNA sequence, if that is protein sequence, please add \'-Pro\' parameter')
 parser.add_argument('-DNA', action='store_true',
                     help='FASTA file for DNA sequences of genes that wish to increase expression')
@@ -180,7 +180,7 @@ def hete(dataSource, species, sourceType, poly, res, res_sites1, res_sites2, res
     opt_seq_ori += '>'
 
     if poly is False and res is False:
-        return opt_seq_ori
+        return opt_seq_ori[:-6]
     else:
         re_rep = ''
         opt_seq = ''
@@ -216,7 +216,7 @@ def hete(dataSource, species, sourceType, poly, res, res_sites1, res_sites2, res
                 opt_seq = ''
                 header = line
                 re_rep += header + '\n'
-        return re_rep
+        return re_rep[:-6]
 
 
 def findrep(polyN, seq, sub_dic):
@@ -259,7 +259,7 @@ if __name__ == '__main__':
     if args.spe is None and args.genome is not None and args.gff is not None:
         weight = wei.read_file(args.genome, args.gff)
         weight2 = weight[:-1]
-        opt = hete(dataSource=args.inp.read(), species=weight2, sourceType=typ, poly=args.poly, res=args.res,
+        opt = hete(dataSource=args.i.read(), species=weight2, sourceType=typ, poly=args.poly, res=args.res,
                    res_sites1=args.res_sites1, res_sites2=args.res_sites2, res_sites3=args.res_sites3)
         with open(args.o, 'w') as fi:
             fi.write(opt)
@@ -277,7 +277,7 @@ if __name__ == '__main__':
 
         if os.path.exists('{}{}'.format(r_path, args.spe)):
             RSCU = open('{}{}'.format(r_path, args.spe), 'r')
-            opt = hete(dataSource=args.inp.read(), species=RSCU, sourceType=typ, poly=args.poly, res=args.res,
+            opt = hete(dataSource=args.i.read(), species=RSCU, sourceType=typ, poly=args.poly, res=args.res,
                        res_sites1=args.res_sites1, res_sites2=args.res_sites2, res_sites3=args.res_sites3)
             with open(args.o, 'w') as fi:
                 fi.write(opt)

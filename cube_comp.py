@@ -26,8 +26,8 @@ parser.add_argument('-genome', nargs='?', type=str, help='The FASTA file of the 
 parser.add_argument('-gff', nargs='?', type=str, help='The annotation file GFF3 format of the species')
 parser.add_argument('-o', nargs='?', type=str, default='cub.txt',
                     help='The file name of output mCAI value.The default file name is \'cub.txt\'')
-parser.add_argument('-cub',nargs='?', type=list or str, default=["CAI","CBI"],
-                    help='The CUB indices you want to calculate, you can input one or more indices, such as ["CAI","ENC"]')
+parser.add_argument('-cub',nargs='?', type=list or str, default=["CAI","ENC"],
+                    help='The CUB indices you want to calculate, you can input one or more indices, such as ["CAI","gc3s"]')
 args = parser.parse_args()
 
 
@@ -52,13 +52,13 @@ def cal_mcai(dataSource, species, indices, out):
     f = dataSource.split('\n')
 
     for line in f:
-        if line.startswith('>') and dna == '':
-            header = line.strip().replace('>', '')
-        elif not line.startswith('>'):
+        if line.startswith(">") and dna == "":
+            header = line.strip().replace(">", "")
+        elif not line.startswith(">"):
             dna = str.upper(dna) + line.strip()
-        elif line.startswith('>') and dna != '':
+        elif line.startswith(">") and dna != "":
             for j in range(0, len(dna), 3):
-                codon = dna[j:j + 3]
+                codon = dna[j: j + 3]
                 if codon in codon_weight:
                     weight_list.append(codon_weight[codon])
             # print(type(dna))
@@ -69,7 +69,9 @@ def cal_mcai(dataSource, species, indices, out):
                 if i == "cai":
                     index_list.append(CAI)
                 elif i == "gc3s":
-                    index_list.append(cseq.silent_base_usage())
+                    index_list.append(cseq.bases2()['GC3s'])
+                elif i == "gc":
+                    index_list.append(cseq.bases2()['GC'])
                 elif i == "cbi":
                     if species == "Escherichia_coli":
                         index_list.append(cseq.cbi())
@@ -99,11 +101,11 @@ def cal_mcai(dataSource, species, indices, out):
                     else:
                         index_list.append("NA")
                 else:
-                    index_list.append(getattr(cseq, i))
+                    index_list.append(getattr(cseq, i)())
             index_list = [str(num) for num in index_list]
 
-            result.write('{}\t'.format(header))
-            result.write("\t".join(index_list))
+            result.write('{}\t'.format(header.upper()))
+            result.write("\t".join([index.upper() for index in index_list]))
             result.write('\n')
             header = line.strip().replace('>', '')
             dna = ""
