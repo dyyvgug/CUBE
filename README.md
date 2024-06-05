@@ -12,7 +12,7 @@
 -----
 **PART1: calculate CUB indices**
 
-&#8195;&#8195;If the species name you plan to calculate is in the **supported_species.txt**, you can use the cube.py script to calculate.If the species is not in supported_species.txt, you can use the cube_comp.py script to calculate, but the **codonw and rpy2** dependent library is difficult to install on Windows, you can refer to this page to install: https://github.com/MyDinnerIsReady/codonw-slim.
+&#8195;&#8195;If the species name you plan to calculate is in the **supported_species.txt**, you can use the cube.py script to calculate.If the species is not in supported_species.txt, you can use the cube_comp.py script to calculate, but the **codonw** and **rpy2** dependent library is difficult to install on Windows, you can refer to this page to install: https://github.com/MyDinnerIsReady/codonw-slim.
 
 cube.py optional arguments:
 ```
