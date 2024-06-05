@@ -19,14 +19,14 @@ cube.py optional arguments:
   -h, --help        show this help message and exit
   -cub [CUB]        The list of CUB indices that you want to calculate, for example: [CAI,gc3s], the default list is CAI and ENC
   -spe [SPE]        The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans
-  -i [I]        The FASTA file of the gene sequences that wants to calculate the cube value
+  -i [I]            The FASTA file of the gene sequences that wants to calculate the cube value
   -o [O]            The file name of output CUB value.The default file name is 'cube.txt'
 ```
 cube_comp.py optional arguments:
 ```
   -h, --help        show this help message and exit
   -spe [SPE]        The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans
-  -i [I]        The FASTA file of gene sequences that you want to calculate the cube value
+  -i [I]            The FASTA file of gene sequences that you want to calculate the cube value
   -genome [GENOME]  The FASTA file of the species genome
   -gff [GFF]        The annotation file GFF3 format of the species
   -cub [CUB]        The list of CUB indices that you want to calculate, for example: [CAI,CBI,gc3s]
@@ -60,7 +60,7 @@ On Linux bash or Windows cmd： ```python cube_comp.py -i input_Zo.fa -gff Zoogl
 opt_seq_comp.py optional arguments:
 ```
   -h, --help            show this help message and exit
-  -i [I]            (Required Parameters) The file name of the original sequence. The
+  -i [I]                (Required Parameters) The file name of the original sequence. The
                         sequence default type is DNA sequence, if that is protein sequence,
                         please add '-Pro' parameter
   -DNA                  FASTA file for DNA sequences of genes that wish to increase expression
