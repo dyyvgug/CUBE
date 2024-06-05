@@ -17,7 +17,7 @@
 cube.py optional arguments:
 ```
   -h, --help        show this help message and exit
-  -cub [CUB]        The list of CUB indices that you want to calculate
+  -cub [CUB]        The list of CUB indices that you want to calculate, for example: [CAI,CBI,gc3s]
   -spe [SPE]        The Latin name of the species, separated by an underscore, for example: Caenorhabditis_elegans
   -inp [INP]        The FASTA file of the gene sequences that wants to calculate the cube value
   -o [O]            The file name of output CUB value.The default file name is 'cube.txt'
@@ -29,6 +29,7 @@ cube_comp.py optional arguments:
   -inp [INP]        The FASTA file of gene sequences that you want to calculate the cube value
   -genome [GENOME]  The FASTA file of the species genome
   -gff [GFF]        The annotation file GFF3 format of the species
+  -cub [CUB]        The list of CUB indices that you want to calculate, for example: [CAI,CBI,gc3s]
   -o [O]            The file name of output CUB value.The default file name is 'cube.txt'
 ```
 &#8195;&#8195;Among them, the ```-spe``` parameter followed by the species that support calculation is in **supported_species.txt**. The ```-inp``` parameter is followed by the gene sequences for which the CUB indices need to be calculated. The example sequences is in the **example_files folder**.```-genome``` and ```-gff``` parameters are followed by genome sequence and GFF3 annotation file respectively.The file format can refer to the example in the example_files folder.Before using the GFF3 file, it is recommended to use the sed_gff.sh script format.The specific command is ```$ bash sed_gff.sh```.
